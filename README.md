@@ -2,7 +2,7 @@
 
 The panel sidebar toggler.
 
-![](https://github.com/jenstornell/kirby-sideswitch/blob/master/sideswitch.gif)
+![](https://github.com/jenstornell/kirby-sideswitch/blob/master/sideswitch2.gif)
 
 ***Require Kirby 2.3 beta+***
 
