@@ -1,0 +1,58 @@
+.sideswitch {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	position: absolute;
+
+	.fa-chevron-right {
+		display: none;
+	}
+}
+
+.sideswitch-button {
+	padding: 1.2em;
+	cursor: pointer;
+	z-index: 100;
+	&:hover {
+		background: #ddd;
+	}
+}
+
+.sideswitch-wide {
+	.sidebar {
+		display: none;
+	}
+
+	.sideswitch .fa-chevron-right {
+		display: inline-block;
+	}
+
+	.sideswitch .fa-chevron-left {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 50em) {
+	.sideswitch .fa-chevron-left {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 50em) {
+	.sideswitch-wide .mainbar {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 50em) {
+	.sideswitch-wide .bars-with-sidebar-left:before {
+		background: none;
+	}
+}
+
+@media screen and (min-width: 50em) {
+	.sideswitch-wide .mainbar .form .buttons {
+		width: 100% !important;
+		left: 0 !important;
+	}
+}
