@@ -1,57 +1,66 @@
 .sideswitch {
-	display: flex;
-	align-items: center;
-	height: 100%;
-	position: absolute;
+	.sideswitch-button {
+		padding-bottom: .8em;
+		cursor: pointer;
+		z-index: 100;
+	}
 
-	.fa-chevron-right {
-		display: none;
+	&.sideswitch-main {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		position: absolute;
+
+		.sideswitch-button {
+			display: none;
+			padding: 1.2em;
+		}
+	}
+
+	&.sideswitch-sidebar {
+		position: absolute;
+		right: 0;
+		z-index: 100;
+
+		.sideswitch-button {
+			padding: 1.5em;
+		}
 	}
 }
 
-.sideswitch-button {
-	padding: 1.2em;
-	cursor: pointer;
-	z-index: 100;
-	&:hover {
-		background: #ddd;
-	}
-}
-
-.sideswitch-wide {
+.sideswitch-closed {
 	.sidebar {
 		display: none;
 	}
 
-	.sideswitch .fa-chevron-right {
-		display: inline-block;
-	}
-
-	.sideswitch .fa-chevron-left {
-		display: none;
+	.sideswitch-main {
+		.sideswitch-button {
+			display: inline-block;
+		}
 	}
 }
 
 @media screen and (max-width: 50em) {
-	.sideswitch .fa-chevron-left {
-		display: none;
+	.sideswitch-sidebar .sideswitch-button,
+	.sideswitch-main .sideswitch-button {
+		display: none !important;
 	}
 }
 
 @media screen and (min-width: 50em) {
-	.sideswitch-wide .mainbar {
+	.sideswitch-closed .mainbar {
 		width: 100%;
 	}
 }
 
 @media screen and (min-width: 50em) {
-	.sideswitch-wide .bars-with-sidebar-left:before {
+	.sideswitch-closed .bars-with-sidebar-left:before {
 		background: none;
 	}
 }
 
 @media screen and (min-width: 50em) {
-	.sideswitch-wide .mainbar .form .buttons {
+	.sideswitch-closed .mainbar .form .buttons {
 		width: 100% !important;
 		left: 0 !important;
 	}

@@ -1,4 +1,9 @@
-.sideswitch {
+.sideswitch .sideswitch-button {
+  padding-bottom: .8em;
+  cursor: pointer;
+  z-index: 100; }
+
+.sideswitch.sideswitch-main {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9,38 +14,37 @@
           align-items: center;
   height: 100%;
   position: absolute; }
-  .sideswitch .fa-chevron-right {
-    display: none; }
+  .sideswitch.sideswitch-main .sideswitch-button {
+    display: none;
+    padding: 1.2em; }
 
-.sideswitch-button {
-  padding: 1.2em;
-  cursor: pointer;
+.sideswitch.sideswitch-sidebar {
+  position: absolute;
+  right: 0;
   z-index: 100; }
-  .sideswitch-button:hover {
-    background: #ddd; }
+  .sideswitch.sideswitch-sidebar .sideswitch-button {
+    padding: 1.5em; }
 
-.sideswitch-wide .sidebar {
+.sideswitch-closed .sidebar {
   display: none; }
 
-.sideswitch-wide .sideswitch .fa-chevron-right {
+.sideswitch-closed .sideswitch-main .sideswitch-button {
   display: inline-block; }
 
-.sideswitch-wide .sideswitch .fa-chevron-left {
-  display: none; }
-
 @media screen and (max-width: 50em) {
-  .sideswitch .fa-chevron-left {
-    display: none; } }
+  .sideswitch-sidebar .sideswitch-button,
+  .sideswitch-main .sideswitch-button {
+    display: none !important; } }
 
 @media screen and (min-width: 50em) {
-  .sideswitch-wide .mainbar {
+  .sideswitch-closed .mainbar {
     width: 100%; } }
 
 @media screen and (min-width: 50em) {
-  .sideswitch-wide .bars-with-sidebar-left:before {
+  .sideswitch-closed .bars-with-sidebar-left:before {
     background: none; } }
 
 @media screen and (min-width: 50em) {
-  .sideswitch-wide .mainbar .form .buttons {
+  .sideswitch-closed .mainbar .form .buttons {
     width: 100% !important;
     left: 0 !important; } }

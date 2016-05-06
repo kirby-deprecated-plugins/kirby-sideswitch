@@ -1,10 +1,20 @@
 # Kirby Sideswitch
 
-*Version 0.2*
+*Version 0.3*
 
 The panel sidebar toggler.
 
-![](https://github.com/jenstornell/kirby-sideswitch/blob/master/sideswitch3.gif)
+**Opened**
+
+Click X to close.
+
+![](https://github.com/jenstornell/kirby-sideswitch/blob/master/open.png)
+
+**Closed**
+
+Click arrow to open.
+
+![](https://github.com/jenstornell/kirby-sideswitch/blob/master/closed.png)
 
 ***Require Kirby 2.3 beta 2***
 
@@ -35,6 +45,11 @@ There are some cases when it's good with  a plugin like this:
 - You want some kind of distraction free writing.
 
 ## Changelog
+
+### 0.3
+
+- Moved back the close icon to the sidebar again. This time it's a closing X.
+- New screenshots. No animations this time.
 
 ### 0.2
 
